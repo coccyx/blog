@@ -19,3 +19,7 @@ I invest in startups. Currently, my portfolio is small, but through GOAT investm
 ## Philanthropy
 
 Melanie and I are currently the primary backers of [Jessi's House](https://www.canva.com/design/DAE2NxZ-Xp4/EkT0mAfz2G2I0UWjhuxe3A/view) in Fort Smith, Arkansas, my home town. Jessi's House provides transitional housing to LGTBQ young adults who may find themselves homeless. Jessi's House is headquartered in our home in beautiful historic Fort Smith, and we are providing the seed funding to get the charity off the ground.
+
+## Photography
+
+I'm a Landscape Photographer, although I'm not as active as I used to be. [My photo gallery is on Smugmug](https://clintsharp.smugmug.com/).

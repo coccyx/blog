@@ -5,3 +5,4 @@ sudo snap alias microk8s.kubectl kubectl
 microk8s enable dns
 microk8s add-node
 microk8s enable metallb:192.168.68.20-192.168.68.39
+kubectl autoscale deployment blog --cpu-percent=50 --min=3 --max=20
