@@ -10,12 +10,6 @@
   identifier = "posts"
   url = "/post/"
 
-  [[archive]]
-  name = "Archive"
-  weight = 200
-  identifier = "archive"
-  url = "/archive/"
-
   [[main]]
   name = "About"
   weight = 400
