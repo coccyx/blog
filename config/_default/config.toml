@@ -1,7 +1,7 @@
 baseURL = "https://clintsharp.com"
 languageCode = "en"
 DefaultContentLanguage = "en"
-title = "Clint Shar2p"
+title = "Clint Sharp"
 
 [module]
   # uncomment line below for temporary local development of module
