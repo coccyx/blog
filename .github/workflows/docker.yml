@@ -32,6 +32,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: clintsharp/blog:latest
+          build-args: HUGO_ENV_ARG=production
       
       - name: Setup Tailscale
         id: tailscale
