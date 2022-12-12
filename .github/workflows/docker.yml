@@ -39,7 +39,6 @@ jobs:
         uses: tailscale/tailscale-deploy-github@main
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
-          version: 1.20.2
 
       - name: Deploy Blog
         uses: actions-hub/kubectl@master
