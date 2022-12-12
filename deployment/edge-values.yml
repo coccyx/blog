@@ -19,62 +19,71 @@ criblImage:
   repository: cribl/cribl
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "3.3.0"
+  tag: "next-nightly"
 
 imagePullSecrets: []
 nameOverride: "edge-wg"
 
 config: 
-  host: 192.168.68.83
+  host: host
   group: homek8s
-  token: criblmaster
+  token: token
   rejectSelfSignedCerts: 0
   healthPort: 9000
   tlsLeader:
-    enable: false
+    enable: true
+  hostNetwork: true
+  probes: false
 
 deployment: daemonset
 
 env:
   CRIBL_DIST_MODE: managed-edge
   CRIBL_EDGE: 1
-
+  
 podAnnotations: {}
 
-
 service:
-  type: LoadBalancer
-  annotations: {}
+    type: LoadBalancer
+    annotation: []
+    ports:
+    - name: http
+      port: 10080
+      protocol: TCP
 
-  ports:
-  - name: tcpjson
-    port: 10001
-    protocol: TCP
-  - name: s2s
-    port: 9997
-    protocol: TCP
-  - name: http
-    port: 10080
-    protocol: TCP
-  - name: https
-    port: 10081
-    protocol: TCP    
-  - name: syslog
-    port: 5140
-    protocol: TCP
-  - name: metrics
-    port: 8125
-    protocol: TCP
-  - name: elastic
-    port: 9200
-    protocol: TCP
+# service:
+#   type: LoadBalancer
+#   annotations: {}
+ 
+#   ports:
+#   - name: tcpjson
+#     port: 10001
+#     protocol: TCP
+#   - name: s2s
+#     port: 9997
+#     protocol: TCP
+#   - name: http
+#     port: 10080
+#     protocol: TCP
+#   - name: https
+#     port: 10081
+#     protocol: TCP    
+#   - name: syslog
+#     port: 5140
+#     protocol: TCP
+#   - name: metrics
+#     port: 8125
+#     protocol: TCP
+#   - name: elastic
+#     port: 9200
+#     protocol: TCP
 
 resources: 
   limits:
-    cpu: 2000m
-    memory: 4096Mi
+    cpu: 1000m
+    memory: 2048Mi
   requests:
-    cpu: 1250m
+    cpu: 500m
     memory: 256Mi
     
 extraVolumeMounts:
